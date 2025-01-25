@@ -4,7 +4,34 @@ import re
 app = Flask(__name__)
 
 # Red flag keywords and patterns
-RED_FLAG_KEYWORDS = ["manipulative", "controlling", "toxic", "abusive", "dishonest"]
+RED_FLAG_KEYWORDS = ["manipulative", "controlling", "toxic", "abusive", "dishonest","suspicious", "danger", "illegal","manipulation",
+        "gaslighting","manipulative",
+        "dishonesty",
+        "controlling behavior",
+        "abuse",
+        "neglect",
+    "business",
+        "scam",
+        "fraud",
+        "unreliable",
+        "untrustworthy",
+        "hidden fees",
+        "lack of transparency",
+"misleading",
+        "burnout",
+        "chronic stress",
+        "emotional instability",
+        "anxiety",
+        "depression",
+        "isolation",
+        "unsafe",
+        "threats",
+        "risky",
+        "unpredictable",
+        "unstable",
+        "hostile environment",
+        "peer pressure",
+        "dangerous"]
 RED_FLAG_PATTERNS = [re.compile(r"too good to be true", re.IGNORECASE)]
 
 @app.route('/')
