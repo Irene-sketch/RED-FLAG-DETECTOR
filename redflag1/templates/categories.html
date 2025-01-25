@@ -183,9 +183,10 @@
     <h1>Pick a Quiz Category</h1>
     <ul class="categories">
       {% for category in categories %}
-      <li><a href="/quiz/{{ category }}">Find the real red flag</a></li>
+      <li><a href="/quiz/{{ category }}">{{ category.replace('_', ' ').capitalize() }}</a></li>
       {% endfor %}
     </ul>
-  </div>
+</div>
+
 </body>
 </html>
