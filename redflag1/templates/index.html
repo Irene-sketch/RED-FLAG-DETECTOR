@@ -6,191 +6,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Red Flag Detector</title>
-  <style>
-    /* General Body Styling */
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Arial', sans-serif;
-      background: linear-gradient(135deg, #f4c2c2 0%, #ff6961 100%);
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      overflow: hidden;
-      position: relative;
-    }
-
-    /* Red Flag Background Animation */
-    .flag {
-      position: absolute;
-      width: 100px;
-      height: 70px;
-      background-color: red;
-      border-radius: 10px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-      animation: float 12s infinite ease-in-out;
-      opacity: 0.8;
-      transform: rotate(-15deg);
-    }
-
-    /* Multiple Flags */
-    .flag:nth-child(1) {
-      top: 10%;
-      left: -20%;
-      animation-duration: 8s;
-      animation-delay: 0s;
-    }
-
-    .flag:nth-child(2) {
-      top: 50%;
-      left: -10%;
-      animation-duration: 10s;
-      animation-delay: 2s;
-    }
-
-    .flag:nth-child(3) {
-      top: 80%;
-      left: 20%;
-      animation-duration: 14s;
-      animation-delay: 4s;
-    }
-
-    .flag:nth-child(4) {
-      top: 40%;
-      left: 90%;
-      animation-duration: 12s;
-      animation-delay: 6s;
-    }
-
-    .flag:nth-child(5) {
-      top: 20%;
-      left: 70%;
-      animation-duration: 10s;
-      animation-delay: 1s;
-    }
-
-    /* Floating Animation */
-    @keyframes float {
-      0% {
-        transform: translateY(0) rotate(-15deg);
-      }
-      50% {
-        transform: translateY(-30px) rotate(-10deg);
-      }
-      100% {
-        transform: translateY(0) rotate(-15deg);
-      }
-    }
-
-    /* Main Content Styling */
-    .container {
-      text-align: center;
-      background-color: rgba(255, 255, 255, 0.95);
-      padding: 40px;
-      border-radius: 15px;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-      z-index: 1;
-      animation: fadeInUp 2s ease-out;
-      width: 60%;
-    }
-
-    .container h1 {
-      font-size: 3rem;
-      color: #d32f2f;
-      text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
-      animation: textGlow 3s ease-in-out infinite alternate;
-    }
-
-    @keyframes textGlow {
-      from {
-        text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
-      }
-      to {
-        text-shadow: 5px 5px 10px rgba(255, 69, 69, 0.7);
-      }
-    }
-
-    .container p {
-      font-size: 1.2rem;
-      color: #333;
-      margin-top: 15px;
-    }
-
-    /* Call-to-Action Button */
-    .cta-button {
-      display: inline-block;
-      margin-top: 25px;
-      padding: 15px 35px;
-      background-color: #d32f2f;
-      color: white;
-      border-radius: 10px;
-      font-size: 1.2rem;
-      font-weight: bold;
-      text-decoration: none;
-      transition: all 0.3s ease;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    }
-
-    .cta-button:hover {
-      background-color: #ff3d3d;
-      transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-    }
-
-    /* Additional Button Animations */
-    .cta-button:active {
-      transform: translateY(0);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    }
-
-    /* Animation for Fade-in */
-    @keyframes fadeInUp {
-      0% {
-        opacity: 0;
-        transform: translateY(40px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* Responsive Design */
-    @media only screen and (max-width: 768px) {
-      .container {
-        width: 90%;
-        padding: 20px;
-      }
-
-      .container h1 {
-        font-size: 2.2rem;
-      }
-
-      .cta-button {
-        padding: 12px 30px;
-        font-size: 1.1rem;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
-<body>
-  <!-- Animated Background with Floating Flags -->
-  <div class="flag"></div>
-  <div class="flag"></div>
-  <div class="flag"></div>
-  <div class="flag"></div>
-  <div class="flag"></div>
-
-  <!-- Main Content Container -->
+<body style="background-color: rgb(226, 178, 178);">
   <div class="container">
-    <h1>Welcome to Red Flag Detector</h1>
-    <p>
-      Spot the red flags in your communication, relationships, and decisions. 
-      Use our tools to stay informed, safe, and empowered in navigating potential risks.
+    <h1 style="color: red; text-align: center;">Welcome to Red Flag Detector</h1>
+    <p style="text-align: center;">
+      Identify potential red flags in your communication, decisions, or relationships to stay safe and informed. 
+      Dive into our tools to analyze situations or test your knowledge!
     </p>
-    <a href="#start" class="cta-button">Start Detecting Red Flags</a>
-    <a href="#quiz" class="cta-button" style="margin-left: 15px;">Take a Quiz</a>
+
+    <div class="options">
+      <button style="margin: 10px; padding: 10px 20px;" onclick="location.href='/detector';">Go to Detector</button>
+      <button style="margin: 10px; padding: 10px 20px;" onclick="location.href='/categories';">Take a Quiz</button>
+    </div>
   </div>
+
+  <footer>
+    <p>&copy; 2025 ByteSquad. All Rights Reserved.</p>
+  </footer>
 </body>
 </html>
