@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Flag Detector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Red Flag Detector</h1>
+        <form id="redFlagForm">
+            <div class="form-group">
+                <label for="description">Enter Description:</label>
+                <textarea id="description" name="description" rows="4" placeholder="Describe the action or person..."></textarea>
+            </div>
+            <button type="button" id="analyzeBtn">Analyze</button>
+        </form>
+        <div id="output" class="output"></div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
