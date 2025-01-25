@@ -174,17 +174,50 @@
       let message = "";
 
       if ("{{ category }}" === "toxic_behaviors") {
-        if (result.red_flags === 0) {
-          header = "No Red Flags! 🎉";
-          message = "This person is a gem 💎! No red flags here.";
-        } else if (result.red_flags <= 2) {
-          header = "Minor Concerns 🚦";
-          message = "A few red flags, but nothing major. Proceed with caution.";
-        } else {
-          header = "Warning! 🚩";
-          message = "This relationship might not be healthy. Stay alert!";
-        }
-      }
+  if (result.red_flags === 0) {
+    header = "No Red Flags! 🎉";
+    message = "This person is a gem 💎! He/She is a green forest😁.";
+  } else if (result.red_flags <= 2) {
+    header = "Minor Concerns 🚦";
+    message = "A few red flags, but nothing major. Proceed with caution.";
+  } else {
+    header = "Warning! 🚩";
+    message = "This relationship might not be healthy. Stay alert!";
+  }
+} else if ("{{ category }}" === "business_dealings") {
+  if (result.red_flags === 0) {
+    header = "Green Light! ✅";
+    message = "This business deal seems trustworthy and transparent. Go ahead!";
+  } else if (result.red_flags <= 2) {
+    header = "Proceed with Caution ⚠️";
+    message = "There are a few concerns about this deal. Make sure to double-check all terms and conditions.";
+  } else {
+    header = "Danger Zone! 🚩";
+    message = "This deal has too many red flags and might be a scam. Avoid proceeding!";
+  }
+} else if ("{{ category }}" === "mental_health") {
+  if (result.red_flags === 0) {
+    header = "All Clear! 🌈";
+    message = "Your mental health seems in a great place. Keep up the good work!";
+  } else if (result.red_flags <= 2) {
+    header = "Take Care 🧘";
+    message = "You might be experiencing minor stress. Consider practicing self-care and seeking support if needed.";
+  } else {
+    header = "Take Action 🚨";
+    message = "Your mental health might be under significant strain. Reach out to a trusted professional or loved one for help.";
+  }
+} else if ("{{ category }}" === "social_situations") {
+  if (result.red_flags === 0) {
+    header = "Safe Zone 🛡️";
+    message = "Your social environment feels safe and respectful. Enjoy your time!";
+  } else if (result.red_flags <= 2) {
+    header = "Be Aware 👀";
+    message = "There might be some minor issues in your social setting. Keep an eye on your boundaries.";
+  } else {
+    header = "Unsafe Environment! 🚩";
+    message = "This social situation might be harmful. Consider removing yourself and seeking safer spaces.";
+  }
+}
 
       // Update modal content
       document.getElementById("modal-header").innerText = header;
