@@ -1,183 +1,25 @@
-<!DOCTYPE html>
+
+
+<!DOCTYPE html> 
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Red Flag Detector</title>
-  <style>
-    /* General Body Styling */
-    body {
-      background-image: url("https://st4.depositphotos.com/40002702/40861/v/450/depositphotos_408611648-stock-illustration-light-red-vector-blurred-colored.jpg");
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      margin: 0;
-      padding: 0;
-      font-family: 'Arial', sans-serif;
-      color: #333;
-      animation: fadeIn 1s ease-out;
-    }
-
-    /* Header Styling */
-    header {
-      background-color: #d63d3d;
-      color: white;
-      padding: 20px 0;
-      text-align: center;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-      opacity: 0;
-      animation: fadeInUp 1s forwards 0.5s;
-    }
-
-    header h1 {
-      font-size: 3rem;
-      font-weight: bold;
-      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    }
-
-    header p {
-      font-size: 1.2rem;
-      margin-top: 10px;
-    }
-
-    /* Hero Section */
-    .hero {
-      text-align: center;
-      background: rgba(255, 255, 255, 0.8);
-      margin-top: 50px;
-      padding: 100px 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-      transform: translateY(20px);
-      opacity: 0;
-      animation: fadeInUp 1.2s forwards 1s;
-    }
-
-    .hero h2 {
-      font-size: 2.5rem;
-      color: #d63d3d;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      color: #555;
-      margin-top: 20px;
-    }
-
-    .cta-button {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 25px;
-      background: #d63d3d;
-      color: white;
-      font-size: 1.1rem;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s, transform 0.2s;
-    }
-
-    .cta-button:hover {
-      background-color: #ff5555;
-      transform: scale(1.05);
-    }
-
-    /* Options Section */
-    .options {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      margin-top: 40px;
-      opacity: 0;
-      animation: fadeInUp 1.2s forwards 1.5s;
-    }
-
-    .options button {
-      background-color: #ff4444;
-      color: white;
-      border: none;
-      border-radius: 10px;
-      font-size: 1rem;
-      font-weight: bold;
-      padding: 15px 35px;
-      cursor: pointer;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      transition: transform 0.2s, background-color 0.3s;
-    }
-
-    .options button:hover {
-      background-color: #ff7777;
-      transform: scale(1.05);
-    }
-
-    /* Footer Styling */
-    footer {
-      background-color: #d63d3d;
-      color: white;
-      text-align: center;
-      padding: 15px 0;
-      margin-top: 40px;
-      opacity: 0;
-      animation: fadeInUp 1s forwards 2s;
-    }
-
-    footer p {
-      font-size: 0.9rem;
-    }
-
-    /* Animations */
-    @keyframes fadeIn {
-      0% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 1;
-      }
-    }
-
-    @keyframes fadeInUp {
-      0% {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
-      .hero {
-        padding: 50px 15px;
-      }
-
-      .cta-button {
-        padding: 10px 20px;
-        font-size: 1rem;
-      }
-
-      .options button {
-        font-size: 0.9rem;
-        padding: 12px 20px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
-<body>
-  <header>
-    <h1>Red Flag Detector</h1>
-    <p>Identify potential red flags in decisions, relationships, and situations</p>
-  </header>
+<body style="background-color: rgb(226, 178, 178);">
+  <div class="container">
+    <h1 style="color: red; text-align: center;">Welcome to Red Flag Detector</h1>
+    <p style="text-align: center;">
+      Identify potential red flags in your communication, decisions, or relationships to stay safe and informed. 
+      Dive into our tools to analyze situations or test your knowledge!
+    </p>
 
-  <div class="hero">
-    <h2>Stay Alert & Protect Yourself</h2>
-    <p>Use our tools to detect red flags in communication or decisions. Test your knowledge with interactive quizzes and tools to stay informed and safe.</p>
-    <a href="#detector" class="cta-button">Start the Detector</a>
-  </div>
-
-  <div class="options">
-    <button onclick="location.href='/detector';">Go to Detector</button>
-    <button onclick="location.href='/quiz';">Take a Quiz</button>
+    <div class="options">
+      <button style="margin: 10px; padding: 10px 20px;" onclick="location.href='/detector';">Go to Detector</button>
+      <button style="margin: 10px; padding: 10px 20px;" onclick="location.href='/categories';">Take a Quiz</button>
+    </div>
   </div>
 
   <footer>
