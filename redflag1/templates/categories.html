@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pick a Category</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <div class="quiz-container">
+    <h1>Pick a Quiz Category</h1>
+    <ul class="categories">
+      {% for category in categories %}
+      <li><a href="/quiz/{{ category }}">Take a quiz to find the real red flag</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+</body>
+</html>

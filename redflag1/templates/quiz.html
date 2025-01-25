@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Quiz the quiz to find out the real red flag🚩</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+
+    .quiz-container {
+      max-width: 600px;
+      margin: 50px auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+
+    h1 {
+      text-align: center;
+      color: #ff5555;
+    }
+
+
+    .categories {
+      list-style: none;
+      padding: 0;
+      text-align: center;
+    }
+
+
+    .categories li {
+      margin: 10px 0;
+    }
+
+
+    .categories a {
+      text-decoration: none;
+      background: #ff5555;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 18px;
+      display: inline-block;
+    }
+
+
+    .categories a:hover {
+      background: #ff7777;
+    }
+
+
+    .question {
+      margin-bottom: 20px;
+    }
+
+
+    label {
+      display: block;
+      margin: 5px 0;
+    }
+
+
+    .submit-btn {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background-color: #ff5555;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+
+    .submit-btn:hover {
+      background-color: #ff7777;
+    }
+
+
+    .result {
+      margin-top: 20px;
+      font-size: 18px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="quiz-container">
+    <h1>Take the quiz to find out the real red flag🚩</h1>
+    <form id="quiz-form">
+      {% for question in questions %}
+      <div class="question">
+        <p>{{ question.question }}</p>
+        <div>
+          {% for option in question.options %}
+          <label>
+            <input type="radio" name="q{{ question.id }}" value="{{ option }}" required>
+            {{ option }}
+          </label>
+          {% endfor %}
+        </div>
+      </div>
+      {% endfor %}
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+    <div id="result" class="result"></div>
+  </div>
+  <script>
+    document.getElementById("quiz-form").addEventListener("submit", async function (event) {
+      event.preventDefault();
+      const formData = new FormData(event.target);
+      const answers = {};
+      formData.forEach((value, key) => {
+        answers[key.replace("q", "")] = value;
+      });
+      const response = await fetch("/result", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ category: "{{ category }}", answers }),
+      });
+      const result = await response.json();
+      document.getElementById("result").innerHTML = `
+        <p>You flagged ${result.red_flags} red flags out of ${result.total_questions} questions.</p>
+        ${result.red_flags > 1 ? "<p>🚩 Watch out!</p>" : "<p>👍 Looks good!</p>"}
+      `;
+    });
+  </script>
+</body>
+</html>
