@@ -239,9 +239,9 @@ In summary, this code creates a visually engaging and interactive quiz where use
 
 
 ## Team Contributions
-- Shadha Mohamed Shareef: index.html and app.py
+- Shadha Mohamed Shareef: care.html ,relation.html and app.py
 - Anju V B: quiz.html and Documentation
-- Irene Treessa Raj: category.html and  detector.html
+- Irene Treessa Raj: care.html and  behaviour.html
 
 ---
 Made with ❤️ at TinkerHub
