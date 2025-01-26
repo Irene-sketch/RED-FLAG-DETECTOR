@@ -65,7 +65,7 @@ A link to an external CSS file (style.css) is added using Flask's url_for functi
 Page Layout and Content:
 The <body> has an inline style to set the background color to a soft red shade (rgb(226, 178, 178)).
 Inside the <body>, there's a <div class="container"> that holds the main content:
-A large, centered <h1> element with the text "Welcome to Red Flag Detector" in red color.
+A large, centered element with the text "Welcome to Red Flag Detector" in red color.
 A paragraph (<p>) briefly explaining the purpose of the page, encouraging users to analyze situations for red flags.
 A div class .options holds two buttons that link to other parts of the website:
 The first button labeled "Go to Detector" takes the user to the /detector page when clicked.
