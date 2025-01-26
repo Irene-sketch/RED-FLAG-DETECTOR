@@ -90,7 +90,8 @@ For Software:
 
 # Screenshots (Add at least 3)
 ![Screenshot1]
-![image](https://github.com/user-attachments/assets/50930099-9753-4662-87d6-2782913047d1)
+![image](https://github.com/user-attachments/assets/7ae1fee6-196d-4ebe-bf0c-e6b9c8fe3c6f)
+
 :This HTML code creates a simple web page for a "Red Flag Detector" with a welcoming interface and two action buttons. Here's a brief breakdown of what happens in the code: HTML Structure:
 The document uses a basic HTML structure with <!DOCTYPE html> and <html lang="en">, specifying the document type and language.
 The <head> section includes metadata such as character encoding (UTF-8), viewport settings for responsive design, and the title of the webpage (Red Flag Detector).
@@ -144,7 +145,8 @@ Elements fade in and slide in as they load using fadeIn and slideIn keyframe ani
 In summary, this webpage allows users to input text, check it for red flags using predefined keywords, and view the results in a clean, animated interface. The main interactive feature is the JavaScript function that detects red flag terms.
 
 ![Screenshot3]
-![image](https://github.com/user-attachments/assets/f0db0dc5-1ab8-4901-9107-664f6ebd5d3a)
+![image](https://github.com/user-attachments/assets/b1d4f187-cb1d-46c0-9f27-3e49d73f35e0)
+
 :This code generates a visually engaging webpage where users can pick a quiz category. Here's a breakdown of the functionality:
 1. HTML Structure:
 The page consists of a quiz container with a heading "Pick a Quiz Category" and a list of category links that users can choose from.
@@ -210,6 +212,8 @@ The result message either warns the user about red flags ("🚩 Watch out for th
 5. Back-end Integration:
 The form's action is handled server-side (likely Flask), where the server processes the quiz responses and returns the result via JSON.
 In summary, this code creates a visually engaging and interactive quiz where users answer questions to spot red flags. It uses animations to enhance the user experience, and JavaScript is used to handle form submission without page reloads, sending data to the server and displaying the results dynamically.
+![Screenshot5]
+![image](https://github.com/user-attachments/assets/41a33cef-ac69-4550-b089-63230597a4fc)
 
 # Diagrams
 [Homepage]
@@ -239,9 +243,9 @@ In summary, this code creates a visually engaging and interactive quiz where use
 
 
 ## Team Contributions
-- Shadha Mohamed Shareef: care.html ,relation.html and app.py
-- Anju V B: quiz.html and Documentation
-- Irene Treessa Raj: care.html and  behaviour.html
+- Shadha Mohamed Shareef: care.html index.html and app.py
+- Anju V B: quiz.html, detector.html Documentation
+- Irene Treessa Raj: relation.html and  behaviour.html
 
 ---
 Made with ❤️ at TinkerHub
