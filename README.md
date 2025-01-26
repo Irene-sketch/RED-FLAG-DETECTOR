@@ -238,8 +238,7 @@ In summary, this code creates a visually engaging and interactive quiz where use
 
 ### Project Demo
 # Video
-[Add your demo video link here]
-*Explain what the video demonstrates*
+https://drive.google.com/file/d/1ja2HOBftyEi3YadI5wNG_-TrCiKntGjj/view?usp=sharing
 
 
 ## Team Contributions
