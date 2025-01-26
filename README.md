@@ -179,43 +179,36 @@ The form's action is handled server-side (likely Flask), where the server proces
 In summary, this code creates a visually engaging and interactive quiz where users answer questions to spot red flags. It uses animations to enhance the user experience, and JavaScript is used to handle form submission without page reloads, sending data to the server and displaying the results dynamically.
 
 # Diagrams
-![Workflow](Add your workflow/architecture diagram here)
-*Add caption explaining your workflow*
+[Homepage]
+   |
+   |--- [Option 1: Go to Detector] ---> [Input Description] ---> [POST /detector]
+   |                                          |
+   |                                          V
+   |                                  [Analyze Description]
+   |                                          |
+   |                                       [Result]
+   |
+   |--- [Option 2: Take a Quiz] ---> [Pick Category] ---> [GET /quiz/{{category}}]
+                                                 |
+                                                 V
+                                         [Display Questions]
+                                                 |
+                                         [Submit Answers] ---> [POST /result]
+                                                 |
+                                                 V
+                                              [Result]
 
-For Hardware:
-
-# Schematic & Circuit
-![Circuit](Add your circuit diagram here)
-*Add caption explaining connections*
-
-![Schematic](Add your schematic diagram here)
-*Add caption explaining the schematic*
-
-# Build Photos
-![Team](Add photo of your team here)
-
-
-![Components](Add photo of your components here)
-*List out all components shown*
-
-![Build](Add photos of build process here)
-*Explain the build steps*
-
-![Final](Add photo of final product here)
-*Explain the final build*
 
 ### Project Demo
 # Video
 [Add your demo video link here]
 *Explain what the video demonstrates*
 
-# Additional Demos
-[Add any extra demo materials/links]
 
 ## Team Contributions
-- Shadha Mohamed Shareef: [Specific contributions]
-- Anju V B: [Specific contributions]
-- Irene Treessa Raj: [Specific contributions]
+- Shadha Mohamed Shareef: index.html and app.py
+- Anju V B: quiz.html and Documentation
+- Irene Treessa Raj: category.html and  detector.html
 
 ---
 Made with ❤️ at TinkerHub
