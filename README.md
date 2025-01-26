@@ -47,10 +47,43 @@ Tools used
 ### Implementation
 For Software:
 # Installation
-[commands]
+cd red-flag-detector
+git init
+git add .
+git commit -m "Initial commit"
+git tag -a v1.0-init -m "Project initialization with basic structure."
+git tag -a v1.0-init -m "Project initialization with basic structure."
+git add .
+git commit -m "Frontend implementation completed."
+git tag -a v1.1-frontend -m "Frontend implemented with HTML, CSS, and JavaScript."
+git add .
+git commit -m "Backend implementation completed."
+git tag -a v1.2-backend -m "Backend implemented using Flask."
+git add .
+git commit -m "Full project with frontend, backend, and deployment ready."
+git tag -a v1.3-full-project -m "Full project ready for deployment."
+
 
 # Run
-[commands]
+cd red-flag-detector
+git init
+git add .
+git commit -m "Initial commit: Project setup and basic structure"
+git tag -a v1.0-init -m "Project initialization with basic structure."
+git add .
+git commit -m "Frontend implementation completed."
+git tag -a v1.1-frontend -m "Frontend implemented with HTML, CSS, and JavaScript."
+git add .
+git commit -m "Backend implementation completed."
+git tag -a v1.2-backend -m "Backend implemented with Flask."
+git add .
+git commit -m "Full project ready, including frontend, backend, and deployment setup."
+git tag -a v1.3-full-project -m "Full project ready for deployment."
+git tag
+git remote add origin <your-repo-url>
+git push origin main --tags
+git push --tags
+
 
 ### Project Documentation
 For Software:
