@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Self-Care and Mental Health Tips</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+      background: linear-gradient(135deg, #d9534f 40%, #fff 40%);
+      background-size: 200% 200%;
+      animation: gradientShift 5s infinite alternate ease-in-out;
+      position: relative;
+    }
+
+    /* Gradient background animation */
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
+
+    /* Floating red flags animation */
+    .floating-flag {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      background-image: url('https://www.example.com/red-flag-small.png'); /* Small red flag image */
+      background-size: cover;
+      animation: floatFlag 10s infinite ease-in-out, rotateFlag 4s infinite ease-in-out;
+    }
+
+    /* Different flag speeds and positions */
+    .floating-flag:nth-child(1) { top: 20%; left: 10%; animation-duration: 6s; }
+    .floating-flag:nth-child(2) { top: 50%; right: 10%; animation-duration: 8s; }
+    .floating-flag:nth-child(3) { bottom: 30%; left: 25%; animation-duration: 12s; }
+    .floating-flag:nth-child(4) { bottom: 20%; right: 20%; animation-duration: 10s; }
+
+    /* Floating animation */
+    @keyframes floatFlag {
+      0% { transform: translateY(0); opacity: 1; }
+      50% { transform: translateY(-50px); opacity: 0.8; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+
+    /* Rotating animation */
+    @keyframes rotateFlag {
+      0% { transform: rotate(0deg); }
+      50% { transform: rotate(15deg); }
+      100% { transform: rotate(0deg); }
+    }
+
+    /* Quiz container */
+    .quiz-container {
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 16px;
+      padding: 40px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      max-width: 450px;
+      width: 100%;
+      border: 2px solid #d9534f;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Red flag image at the top */
+    .quiz-container::before {
+      content: "";
+      background-image: url('https://www.example.com/red-flag.png'); /* Add your red flag image URL */
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: -50px;
+      left: calc(50% - 30px);
+      width: 60px;
+      height: 60px;
+      animation: wave 3s infinite;
+    }
+
+    /* Animation for waving red flag at the top */
+    @keyframes wave {
+      0% { transform: rotate(0deg); }
+      50% { transform: rotate(15deg); }
+      100% { transform: rotate(0deg); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating red flags -->
+  <div class="floating-flag"></div>
+  <div class="floating-flag"></div>
+  <div class="floating-flag"></div>
+  <div class="floating-flag"></div>
+
+  <!-- Quiz container for self-care tips -->
+  <div class="quiz-container">
+    <h2>Self-Care and Mental Health Tips</h2>
+    <p>Maintaining mental health is crucial for a balanced and happy life. Here are some tips:</p>
+    <ul>
+      <li>Practice mindfulness and meditation.</li>
+      <li>Ensure you get enough sleep (7-9 hours per night).</li>
+      <li>Exercise regularly to boost endorphins.</li>
+      <li>Set boundaries to reduce stress.</li>
+      <li>Talk to a therapist or counselor when needed.</li>
+    </ul>
+    
+    <h3>Quick Self-Care Quiz</h3>
+    <form>
+      <label for="question1">How often do you meditate?</label>
+      <select id="question1" name="question1">
+        <option value="never">Never</option>
+        <option value="sometimes">Sometimes</option>
+        <option value="daily">Daily</option>
+      </select><br><br>
+      
+      <label for="question2">Do you take regular breaks from work/screen?</label>
+      <select id="question2" name="question2">
+        <option value="never">Never</option>
+        <option value="sometimes">Sometimes</option>
+        <option value="always">Always</option>
+      </select><br><br>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+</body>
+</html>

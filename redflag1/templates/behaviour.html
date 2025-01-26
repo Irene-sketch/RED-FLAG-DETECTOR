@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Flags vs. Green Flags</title>
+    <style>
+        /* Provided CSS */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            background: linear-gradient(135deg, #d9534f 40%, #fff 40%);
+            background-size: 200% 200%;
+            animation: gradientShift 5s infinite alternate ease-in-out;
+            position: relative;
+        }
+
+        @keyframes gradientShift {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            100% {
+                background-position: 100% 50%;
+            }
+        }
+
+        .floating-flag {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background-image: url('https://www.example.com/red-flag-small.png'); /* Replace with your red flag image URL */
+            background-size: cover;
+            animation: floatFlag 10s infinite ease-in-out, rotateFlag 4s infinite ease-in-out;
+        }
+
+        .floating-flag:nth-child(1) {
+            top: 20%;
+            left: 10%;
+            animation-duration: 6s;
+        }
+
+        .floating-flag:nth-child(2) {
+            top: 50%;
+            right: 10%;
+            animation-duration: 8s;
+        }
+
+        .floating-flag:nth-child(3) {
+            bottom: 30%;
+            left: 25%;
+            animation-duration: 12s;
+        }
+
+        .floating-flag:nth-child(4) {
+            bottom: 20%;
+            right: 20%;
+            animation-duration: 10s;
+        }
+
+        @keyframes floatFlag {
+            0% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+
+            50% {
+                transform: translateY(-50px);
+                opacity: 0.8;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes rotateFlag {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            50% {
+                transform: rotate(15deg);
+            }
+
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+
+        .quiz-container {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            max-width: 600px;
+            width: 90%;
+            border: 2px solid #d9534f;
+            position: relative;
+            z-index: 2;
+        }
+
+        .quiz-container::before {
+            content: "";
+            background-image: url('https://www.example.com/red-flag.png'); /* Add your red flag image URL */
+            background-size: contain;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: -50px;
+            left: calc(50% - 30px);
+            width: 60px;
+            height: 60px;
+            animation: wave 3s infinite;
+        }
+
+        @keyframes wave {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            50% {
+                transform: rotate(-10deg);
+            }
+
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+
+        /* Table styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            padding: 15px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f5f5f5;
+            font-weight: bold;
+        }
+
+        td {
+            font-size: 1rem;
+        }
+
+        .green {
+            background-color: #d4edda;
+            color: #155724;
+        }
+
+        .red {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Floating flags for animation -->
+    <div class="floating-flag"></div>
+    <div class="floating-flag"></div>
+    <div class="floating-flag"></div>
+    <div class="floating-flag"></div>
+
+    <!-- Container with the quiz -->
+    <div class="quiz-container">
+        <h1>Red Flags vs. Green Flags</h1>
+        <p>Identify behaviors and signs that indicate healthy (green flags) or unhealthy (red flags) relationships.</p>
+
+        <!-- Table for green and red flag comparison -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Green Flag Behavior</th>
+                    <th>Red Flag Behavior</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="green">Open and honest communication</td>
+                    <td class="red">Frequent lying or withholding information</td>
+                </tr>
+                <tr>
+                    <td class="green">Respect for boundaries</td>
+                    <td class="red">Pressuring or ignoring personal boundaries</td>
+                </tr>
+                <tr>
+                    <td class="green">Supportive and encouraging</td>
+                    <td class="red">Criticizing or putting you down often</td>
+                </tr>
+                <tr>
+                    <td class="green">Taking responsibility for actions</td>
+                    <td class="red">Blaming others for personal mistakes</td>
+                </tr>
+                <tr>
+                    <td class="green">Equal give and take in relationships</td>
+                    <td class="red">Controlling or dominating behavior</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
