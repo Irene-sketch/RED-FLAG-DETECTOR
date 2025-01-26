@@ -170,8 +170,10 @@ The list of quiz categories is populated dynamically using a server-side templat
 Though not visible in this snippet, the backend likely provides the list of categories for the template. When a category is selected, it redirects the user to a specific quiz page for that category (/quiz/{{ category }}).
 Summary:
 This code creates an interactive and animated webpage where users can select a quiz category. The design features floating red flags, animated buttons, and particle effects, making the page visually appealing. The category list is dynamically generated from the backend, and the quiz container invites users to choose a quiz through engaging animations.
-
 ![Screenshot4]
+![image](https://github.com/user-attachments/assets/d3a4886a-2da0-4de4-a855-889b56451c21)
+
+![Screenshot5]
 ![image](https://github.com/user-attachments/assets/2d017bd3-42bd-441a-8751-4b712fdaf144)
 :This code creates an interactive quiz on a webpage, called "Find the Real Red Flags 🚩", where users can answer questions and identify potential "red flags" (indicators of problematic behavior or situations). Here's a breakdown of what's happening:
 1. HTML Structure:
@@ -212,7 +214,7 @@ The result message either warns the user about red flags ("🚩 Watch out for th
 5. Back-end Integration:
 The form's action is handled server-side (likely Flask), where the server processes the quiz responses and returns the result via JSON.
 In summary, this code creates a visually engaging and interactive quiz where users answer questions to spot red flags. It uses animations to enhance the user experience, and JavaScript is used to handle form submission without page reloads, sending data to the server and displaying the results dynamically.
-![Screenshot5]
+![Screenshot6]
 ![image](https://github.com/user-attachments/assets/41a33cef-ac69-4550-b089-63230597a4fc)
 
 # Diagrams
